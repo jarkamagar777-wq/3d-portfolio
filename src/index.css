@@ -24,7 +24,7 @@ body {
   --color-white-600: #AFB0B6;
   --color-white-500: #62646C;
 
-  --background-image-terminal: url('/assets/terminal.png');
+  --background-image-terminal: url('/3d-portfolio/assets/terminal.png');
 }
 
 /* ─── Layout Utilities ─────────────────────────────────────────── */

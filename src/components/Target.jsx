@@ -2,9 +2,11 @@ import { useGLTF } from '@react-three/drei';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
+const BASE_URL = import.meta.env.BASE_URL || '/';
+
 const Target = (props) => {
   const targetRef = useRef();
-  const { scene } = useGLTF('./models/car.glb')
+  const { scene } = useGLTF(`${BASE_URL}models/car.glb`)
 
   useEffect(() => {
     if (!targetRef.current) return;
@@ -24,6 +26,6 @@ const Target = (props) => {
   );
 };
 
-useGLTF.preload('./models/car.glb');
+useGLTF.preload(`${BASE_URL}models/car.glb`);
 
 export default Target;

@@ -3,6 +3,8 @@ import Globe from 'react-globe.gl';
 
 import Button from '../components/Button.jsx';
 
+const BASE_URL = import.meta.env.BASE_URL || '/';
+
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
@@ -20,7 +22,7 @@ const About = () => {
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
+            <img src={`${BASE_URL}assets/grid1.png`} alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
               <p className="grid-headtext">Hi, I’m Dilip Jarka Magar</p>
@@ -34,7 +36,7 @@ const About = () => {
 
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/teachstack.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
+            <img src={`${BASE_URL}assets/teachstack.png`} alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
               <p className="grid-headtext">Tech Stack</p>
@@ -71,7 +73,7 @@ const About = () => {
 
         <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
+            <img src={`${BASE_URL}assets/grid3.png`} alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
 
             <div>
               <p className="grid-headtext">My Passion for Coding</p>
@@ -86,7 +88,7 @@ const About = () => {
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container">
             <img
-              src="assets/grid4.png"
+              src={`${BASE_URL}assets/grid4.png`}
               alt="grid-4"
               className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
             />
@@ -94,7 +96,7 @@ const About = () => {
             <div className="space-y-2">
               <p className="grid-subtext text-center">Contact me</p>
               <div className="copy-container" onClick={handleCopy}>
-                <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
+                <img src={hasCopied ? `${BASE_URL}assets/tick.svg` : `${BASE_URL}assets/copy.svg`} alt="copy" />
                 <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">jarkamagar777@gmail.com</p>
               </div>
             </div>

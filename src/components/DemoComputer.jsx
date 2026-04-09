@@ -8,10 +8,10 @@ import gsap from 'gsap';
 
 const DemoComputer = (props) => {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF('/models/computer.glb');
+  const { nodes, materials, animations } = useGLTF('./models/computer.glb');
   useAnimations(animations, group);
 
-  const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/project1.mp4', { flipY: false });
+  const txt = useVideoTexture(props.texture ? props.texture : './textures/project/project1.mp4', { flipY: false });
 
   useEffect(() => {
     if (!group.current) return;
@@ -1006,6 +1006,6 @@ const DemoComputer = (props) => {
   );
 };
 
-useGLTF.preload('/models/computer.glb');
+useGLTF.preload('./models/computer.glb');
 
 export default DemoComputer;
